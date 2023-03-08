@@ -35,8 +35,8 @@ function stopTimer() {
     body.appendChild(timer);
     body.appendChild(size);
     body.appendChild(lines);
-    size.textContent=textSize;
-    lines.textContent=textHeight;
+    size.textContent= `Schriftgröße: ${textSize}pt`;
+    lines.textContent= `Texthöhe: ${textHeight}px, Textbreite ${textWidth}px`;
     // Format the time as HH:MM:SS
 
     const hours = Math.floor(elapsedTime / 3600);
@@ -66,6 +66,7 @@ startTimer();
 
 //get the number of lines
 const textHeight = trainText.scrollHeight;
+const textWidth = trainText.scrollWidth;
 console.log(textHeight);
 
 
