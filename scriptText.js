@@ -6,6 +6,7 @@ const body = document.body;
 const trainText = document.getElementById('texttrains')
 const stopButton = document.getElementById('stop-time-button')
 
+
 stopButton.addEventListener("click", stopTimer);
 
 
@@ -14,6 +15,7 @@ let startTime, endTime, elapsedTime;
 let timerInterval;
 const timer = document.createElement("p");
 const size = document.createElement("p");
+const lines = document.createElement("p");
 
 function startTimer() {
 // Store the start time
@@ -33,7 +35,9 @@ stopButton.remove();
 timer.id="timer";
 body.appendChild(timer);
 body.appendChild(size);
+body.appendChild(lines);
 size.textContent=textSize;
+lines.textContent=linies;
 // Format the time as HH:MM:SS
 
 const hours = Math.floor(elapsedTime / 3600);
@@ -58,7 +62,12 @@ return value < 10 ? `0${value}` : value;
 }
 
 trainText.style.fontSize = textSize + 'pt';
+stopButton.style.fontSize = textSize + 'pt';
 startTimer();
 
-
+//get the number of lines
+const textHeight = trainText.offsetHeight;
+const lineHeight = document.defaultView.getComputedStyle(trainText, null).getPropertyValue("lineHeight");
+console.log(lineHeight);
+const linies = textHeight/lineHeight;
 
