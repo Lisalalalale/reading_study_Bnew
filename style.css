@@ -13,7 +13,7 @@
         margin: 0 auto;
         padding: 1rem;
         text-align: left;
-        font-size: 16px;
+        font-size: 16pt;
         line-height:140%;
         font-style: 'Calibri';
       }
@@ -45,10 +45,14 @@
         text-align: center;
         padding: 1 rem;
       }
-      #color-slider {
+      #text-size-input {
         display: block;
         margin: 0 auto;
         width: 60%;
       }
-
+    
+      
+      
+      
+    
     

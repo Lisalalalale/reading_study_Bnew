@@ -35,12 +35,13 @@ body.appendChild(timer);
 body.appendChild(size);
 size.textContent=textSize;
 // Format the time as HH:MM:SS
+
 const hours = Math.floor(elapsedTime / 3600);
 const minutes = Math.floor((elapsedTime % 3600) / 60);
 const seconds = elapsedTime % 60;
 const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-
-document.getElementById("timer").innerHTML = formattedTime
+console.log(formattedTime)
+document.getElementById("timer").innerHTML =`Zeit: ${elapsedTime}s`  ;
 }
 
 function updateTimer() {
@@ -56,7 +57,7 @@ function pad(value) {
 return value < 10 ? `0${value}` : value;
 }
 
-trainText.style.fontSize = textSize + 'px';
+trainText.style.fontSize = textSize + 'pt';
 startTimer();
 
 
