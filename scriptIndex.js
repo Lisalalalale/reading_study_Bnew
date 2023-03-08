@@ -19,7 +19,7 @@ textSizeInput.addEventListener("input", function(event) {
 
 
 textToggleButton.addEventListener("click", changeToText);
-console.log(`textA.html?textSize= ${textSizeInput.value}`);
+console.log(`textB.html?textSize= ${textSizeInput.value}`);
 
 
 function changeToText() {
