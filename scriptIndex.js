@@ -8,8 +8,10 @@ const textToggleButton = document.getElementById("text-toggle-button");
 textSizeInput.addEventListener("input", function(event) {
   loremIpsum.style.fontSize = textSizeInput.value + "pt";
   infotext.style.fontSize = textSizeInput.value + "pt";
+  textToggleButton.style.fontSize = textSizeInput.value + "pt";
   
 });
+
 
 
 
