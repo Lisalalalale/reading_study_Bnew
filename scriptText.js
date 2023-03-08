@@ -1,7 +1,6 @@
 
 const urlParams = new URLSearchParams(window.location.search);
 const textSize = urlParams.get('textSize');
-console.log(textSize)
 const body = document.body;
 const trainText = document.getElementById('texttrains')
 const stopButton = document.getElementById('stop-time-button')
@@ -18,34 +17,34 @@ const size = document.createElement("p");
 const lines = document.createElement("p");
 
 function startTimer() {
-// Store the start time
-startTime = new Date();
+    // Store the start time
+    startTime = new Date();
 
-// Start the timer
-timerInterval = setInterval(updateTimer, 1000);
+    // Start the timer
+    timerInterval = setInterval(updateTimer, 1000);
 }
 
 function stopTimer() {
-// Stop the timer
-clearInterval(timerInterval);
-//removes the train texts and the button
-trainText.remove();
-stopButton.remove();
-// displays the time and the text size
-timer.id="timer";
-body.appendChild(timer);
-body.appendChild(size);
-body.appendChild(lines);
-size.textContent=textSize;
-lines.textContent=linies;
-// Format the time as HH:MM:SS
+    // Stop the timer
+    clearInterval(timerInterval);
+    //removes the train texts and the button
+    trainText.remove();
+    stopButton.remove();
+    // displays the time and the text size
+    timer.id="timer";
+    body.appendChild(timer);
+    body.appendChild(size);
+    body.appendChild(lines);
+    size.textContent=textSize;
+    lines.textContent=textHeight;
+    // Format the time as HH:MM:SS
 
-const hours = Math.floor(elapsedTime / 3600);
-const minutes = Math.floor((elapsedTime % 3600) / 60);
-const seconds = elapsedTime % 60;
-const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-console.log(formattedTime)
-document.getElementById("timer").innerHTML =`Zeit: ${elapsedTime}s`  ;
+    const hours = Math.floor(elapsedTime / 3600);
+    const minutes = Math.floor((elapsedTime % 3600) / 60);
+    const seconds = elapsedTime % 60;
+    const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    console.log(formattedTime)
+    document.getElementById("timer").innerHTML =`Zeit: ${elapsedTime}s`  ;
 }
 
 function updateTimer() {
@@ -66,8 +65,7 @@ stopButton.style.fontSize = textSize + 'pt';
 startTimer();
 
 //get the number of lines
-const textHeight = trainText.offsetHeight;
-const lineHeight = document.defaultView.getComputedStyle(trainText, null).getPropertyValue("lineHeight");
-console.log(lineHeight);
-const linies = textHeight/lineHeight;
+const textHeight = trainText.scrollHeight;
+console.log(textHeight);
+
 
