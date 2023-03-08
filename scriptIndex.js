@@ -3,6 +3,9 @@ const textSizeInput = document.getElementById("text-size-input");
 const loremIpsum = document.getElementById("lorem-ipsum");
 const infotext = document.getElementById("info-text")
 const textToggleButton = document.getElementById("text-toggle-button");
+loremIpsum.style.fontSize = textSizeInput.value + "pt";
+  infotext.style.fontSize = textSizeInput.value + "pt";
+  textToggleButton.style.fontSize = textSizeInput.value + "pt";
 
 
 textSizeInput.addEventListener("input", function(event) {
